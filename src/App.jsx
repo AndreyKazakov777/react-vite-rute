@@ -10,14 +10,14 @@ import Button from "./components/Button/Button.jsx"
 
 
 function App() {
-  const [content, setContent] = useState('Нажми на кнопку')
+  const [contentType, setContentType] = useState('Нажми на кнопку')
   // let content = 'Нажми на кнопку'
 
 console.log('App Render')
 
   function handleClick2(type) {
     // console.log('button clicked2', type)
-    setContent(type)
+    setContentType(type)
     // console.log(content)
     // content = type
 }
@@ -46,7 +46,7 @@ console.log('App Render')
           <Button onClicked2={() => handleClick2('easy')}>Доступность</Button>
           <Button onClicked2={() => handleClick2('program')}>Концентрация</Button>
 
-          <p>{differences[content]}</p>
+          <p>{differences[contentType]}</p>
         </section>
 
        

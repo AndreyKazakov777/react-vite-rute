@@ -1,14 +1,18 @@
 import logo from '/vite.svg'
+import { useState } from 'react'
 
 export default function Header() {
-    const localTime = new Date()
+    const now = new Date()
+    // const [now, setNow] = useState(new Date())
+
+    // setInterval(() => setNow(new Date()), 1000)
 
     return (
       <header>
         <img src={logo} alt="Logo" />
         
   
-        <span>Время сейчас: {localTime.toLocaleTimeString()} </span>
+        <span>Время сейчас: {now.toLocaleTimeString()} </span>
       </header>
     )
   }
