@@ -3,18 +3,23 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/Header'
-import { ways } from './data'
+import { ways, differences } from './data'
 import WayToTeach from "./components/WayToTeach"
 import Button from "./components/Button/Button.jsx"
 
 
 
 function App() {
-let content = 'Нажми на кнопку'
+  const [content, setContent] = useState('Нажми на кнопку')
+  // let content = 'Нажми на кнопку'
+
+console.log('App Render')
 
   function handleClick2(type) {
-    console.log('button clicked2', type)
-    content = type
+    // console.log('button clicked2', type)
+    setContent(type)
+    // console.log(content)
+    // content = type
 }
 
   return (
@@ -38,10 +43,10 @@ let content = 'Нажми на кнопку'
         <section>
           <h1>Hello React!</h1>
           <Button onClicked2={() => handleClick2('way')}>Подход</Button>
-          <Button onClicked2={() => handleClick2('east')}>Доступность</Button>
+          <Button onClicked2={() => handleClick2('easy')}>Доступность</Button>
           <Button onClicked2={() => handleClick2('program')}>Концентрация</Button>
 
-          <p>{content}</p>
+          <p>{differences[content]}</p>
         </section>
 
        
