@@ -6,7 +6,7 @@ export default function Button({children, onClicked2}) {
     // }
 
     const handleMouseEnter = () => {
-        console.log('entered')
+        // console.log('entered')
     }
     
     return (
@@ -15,7 +15,7 @@ export default function Button({children, onClicked2}) {
     // onClick={handleClick}
     onClick={onClicked2}
     onMouseEnter={handleMouseEnter}
-    onDoubleClick={() => console.log("double click")}
+    // onDoubleClick={() => console.log("double click")}
     >
     {children}
     </button>
