@@ -46,7 +46,7 @@ console.log('App Render')
           <Button onClicked2={() => handleClick2('easy')}>Доступность</Button>
           <Button onClicked2={() => handleClick2('program')}>Концентрация</Button>
 
-          <p>{content}</p>
+          <p>{differences[content]}</p>
         </section>
 
        
