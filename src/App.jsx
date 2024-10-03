@@ -31,20 +31,24 @@ function App() {
           <h3>Наш подход к обучению</h3>
 
           <ul>
-            <WayToTeach 
+            {ways.map((way) => {
+              return <WayToTeach key={way.title} {...way} />
+            })}
+
+            {/* <WayToTeach 
               title={ways[0].title} 
               description={ways[0].description}
             />
             <WayToTeach {...ways[1]} />
             <WayToTeach {...ways[2]} />
-            <WayToTeach {...ways[0]} />
+            <WayToTeach {...ways[0]} /> */}
           </ul>
         </section>
         <section>
           <h1>Hello React!</h1>
-          <Button onClicked2={() => handleClick2('way')}>Подход</Button>
-          <Button onClicked2={() => handleClick2('easy')}>Доступность</Button>
-          <Button onClicked2={() => handleClick2('program')}>Концентрация</Button>
+          <Button isActive={contentType == 'way'} onClicked2={() => handleClick2('way')}>Подход</Button>
+          <Button isActive={contentType == 'easy'} onClicked2={() => handleClick2('easy')}>Доступность</Button>
+          <Button isActive={contentType == 'program'} onClicked2={() => handleClick2('program')}>Концентрация</Button>
 
         {/* {contentType ? (
           <p>{differences[contentType]}</p>

@@ -1,6 +1,6 @@
 import "./Button.css"
 
-export default function Button({children, onClicked2}) {
+export default function Button({children, onClicked2, isActive}) {
     // function handleClick() {
     //     console.log('button clicked')
     // }
@@ -11,7 +11,7 @@ export default function Button({children, onClicked2}) {
     
     return (
     <button 
-    className = 'button active' 
+    className = {isActive ? 'button active' : 'button'}
     // onClick={handleClick}
     onClick={onClicked2}
     onMouseEnter={handleMouseEnter}
