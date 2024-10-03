@@ -11,7 +11,7 @@ export default function Button({children, onClicked2}) {
     
     return (
     <button 
-    className = 'button' 
+    className = 'button active' 
     // onClick={handleClick}
     onClick={onClicked2}
     onMouseEnter={handleMouseEnter}
