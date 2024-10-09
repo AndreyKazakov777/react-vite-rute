@@ -1,6 +1,17 @@
 import logo from '/vite.svg'
 import { useState } from 'react'
 import './Header.css'
+import { styled } from 'styled-components'
+
+const HeaderContainer = styled.header`
+    height: 50px;
+    display: flex;
+    padding: 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    background: #fafafa;
+`
 
 export default function Header() {
     const now = new Date()
@@ -9,11 +20,11 @@ export default function Header() {
     // setInterval(() => setNow(new Date()), 1000)
 
     return (
-      <header>
+      <HeaderContainer>
         <img src={logo} alt="Logo" />
         
   
         <span>Время сейчас: {now.toLocaleTimeString()} </span>
-      </header>
+      </HeaderContainer>
     )
   }

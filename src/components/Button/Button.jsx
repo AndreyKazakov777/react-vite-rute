@@ -1,4 +1,4 @@
-import "./Button.css"
+import classes from "./Button.module.css"
 
 export default function Button({children, onClicked2, isActive}) {
     // function handleClick() {
@@ -11,7 +11,8 @@ export default function Button({children, onClicked2, isActive}) {
     
     return (
     <button 
-    className = {isActive ? 'button active' : 'button'}
+    className = {isActive ? `${classes.button} ${classes.active}` : classes.button}
+
     // onClick={handleClick}
     onClick={onClicked2}
     // onMouseEnter={handleMouseEnter}
