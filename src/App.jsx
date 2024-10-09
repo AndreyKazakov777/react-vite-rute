@@ -2,15 +2,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Header from './components/Header'
+import Header from './components/Header/Header.jsx'
 import TeachingSection from './components/TeachingSection.jsx'
 import DiferencesSection from './components/DiferencesSection.jsx'
 import IntroSection from './components/IntroSection.jsx'
 import TabSection from './components/TabsSection.jsx'
+import FedbackSection from './components/FeedbackSection.jsx'
 
 
 
 function App() {
+  const [tab, setTab] = useState('feedback')
  
 
   return (
@@ -18,9 +20,16 @@ function App() {
       <Header />
       <main>
         <IntroSection />
-        <TabSection />
-        <TeachingSection />
-        <DiferencesSection />
+        <TabSection active={tab} onChange={(current) => setTab(current)} />
+
+        {tab == 'main' && (
+          <>
+            <TeachingSection />
+            <DiferencesSection />
+          </>
+        )}
+        {tab == 'feedback' && <FedbackSection />}
+
       </main>
     </div>
   )

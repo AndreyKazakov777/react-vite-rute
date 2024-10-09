@@ -5,16 +5,16 @@ export default function Button({children, onClicked2, isActive}) {
     //     console.log('button clicked')
     // }
 
-    const handleMouseEnter = () => {
+    // const handleMouseEnter = () => {
         // console.log('entered')
-    }
+    // }
     
     return (
     <button 
     className = {isActive ? 'button active' : 'button'}
     // onClick={handleClick}
     onClick={onClicked2}
-    onMouseEnter={handleMouseEnter}
+    // onMouseEnter={handleMouseEnter}
     // onDoubleClick={() => console.log("double click")}
     >
     {children}
