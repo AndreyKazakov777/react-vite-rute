@@ -9,6 +9,7 @@ export default function Button({children, onClicked2, isActive}) {
         // console.log('entered')
     // }
     
+
     return (
     <button 
     className = {isActive ? `${classes.button} ${classes.active}` : classes.button}
