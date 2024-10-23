@@ -14,8 +14,8 @@ const HeaderContainer = styled.header`
 `
 
 export default function Header() {
-    const now = new Date()
-    // const [now, setNow] = useState(new Date())
+    
+    const [now, setNow] = useState(new Date())
 
     // setInterval(() => setNow(new Date()), 1000)
 

@@ -1,7 +1,9 @@
 import './Modal.css'
+import {createPortal} from 'react-dom'
 
-export default function Modal({ children }) {
-    return(
-        <dialog open>{children}</dialog>
+export default function Modal({ children, open }) {
+    return createPortal(
+        <dialog open={open}>{children}</dialog>,
+        document.getElementById('modal')
     )   
 }
